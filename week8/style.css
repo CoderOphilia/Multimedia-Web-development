@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* body{
+    background-image: url(Images/bc.jfif);
+    background-attachment: fixed;
+} */
+
+figure{
+    /* width:80%; */
+    margin:20px auto 0px;
+}
+
+figure img{
+    display: block;
+    width: 30%;
+    margin: auto;
+}
+
+figure figcaption{
+    text-align: center;
+    font-style: italic;
+    font-size: 0.75;
+    padding: 10px;
+    background-color: brown;
+    color:white
+}
+
+div#backgroundImageExam{
+  /* border: 2px solid rgb(222, 96, 96);
+  border-right-width: 20px; */
+  /*border-radius: 70px 20px; */ /*top-left bottom-right*/
+  /*border-radius: 150px/20px;*/ /* horizonal ratio / vertical ratio*/
+  border-top-right-radius: 30%;
+  border-width: 15px 12px 10px 17px;
+  border-style: solid dotted dashed double;
+  border-color: rgb(222, 96, 96) rgb(142, 142, 209) rgb(61, 169, 61) rgb(244, 244, 129); /**top right bottom left */
+  font-size: 2em;
+  padding: 20px;
+  width: 60%;
+  color: rgb(190, 213, 233);
+  /*background-image: url(Images/fishing.jfif);
+  background-repeat: no-repeat;
+  background-size: 350px 500px; /*we can use auto in the place of width to adjust the width along with the height*/
+   /*background-attachment: scroll;*/
+  /* background-position: bottom right; */
+  /* background-clip: content-box;*/ /*This is to adjust the image to the content instead of going towards the padding*/
+  
+  background: url(Images/fishing.jfif) top left no-repeat,
+              url(Images/hiking.jfif) bottom right no-repeat,
+              url(Images/kayaking.jpg);
+
+}
+
+div#borderImageExample{
+    font-size: 2em;
+    border-width: 10px;
+    border-style: solid;
+    /* background-color: rgb(244, 244, 129); */
+    background: linear-gradient(rgb(142, 142, 209) 10%, rgb(235, 182, 182) 20%,rgb(244, 244, 129));
+    /* border-image: url(Images/bc.jfif) 50 repeat; */
+    box-shadow: inset rgb(214, 63, 63) -10px -15px 15px,
+                inset rgb(142, 142, 209) 15px 15px 5px;
+}
+
+div#borderImageExample::first-letter{
+    font-size: 2em;
+    color:rgb(214, 63, 63);
+    text-shadow:rgb(142, 142, 209) -7px -10px 6px,
+                rgb(168, 249, 168) -7px -10px 7px,
+                rgb(0, 0, 0) -7px -10px 7px; /*color horizonal vertical opacity*/
+}
