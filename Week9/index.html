@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form
+      id="survey"
+      action="www.example.com"
+      method="post"
+      enctype="application/x-www-form-urlencoded"
+    >
+      <!-- action: where the data is sent
+         method : how data is sent 
+         when we use 'post', the data will be hidden while sending the data
+         'get', the data will be attached to the link and it will be visible. This is the default value
+    -->
+
+      <fieldset id="custInfo">
+        <legend>Customer Information</legend>
+
+        <div class="rowForm">
+          <label for="cName">Name</label>
+          <input
+            type="text"
+            id="cName"
+            name="custNme"
+            placeholder="Enter First Name and Last name"
+          />
+        </div>
+
+        <div class="rowForm">
+          <label for="address">Street Address </label>
+          <input type="text" id="address" name="custAdd" />
+        </div>
+
+        <div class="rowForm">
+          <label for="city">City</label>
+          <input type="text" id="city" name="custCity" value="Vancouver" />
+        </div>
+
+        <div class="rowForm">
+          <label for="prov">Province</label>
+          <input list="provList" type="text" id="prov" name="custPov"  />
+          <datalist id="provList">
+            <option value="Alberta"></option>
+            <option value="British Columbia"></option>
+            <option value="Ontario"></option>
+            <option value="Prince Edward Island"></option>
+            <option value="Manitoba"></option>
+            <option value="New Brunswick"></option>
+            <option value="NewFoundLand and Labrador"></option>
+            <option value="Nova Scotia"></option>
+          </datalist>
+        </div>
+
+        <div class="rowForm">
+          <label for="pCode">Postal Code</label>
+          <input type="text" id="pCode" name="custPCode" />
+        </div>
+
+        <div class="rowForm">
+          <label for="cell">Phone Number</label>
+          <input
+            type="tel"
+            id="cell"
+            name="custCell"
+            placeholder="(nnn)-nnn-nnnn"
+          />
+        </div>
+
+        <div class="rowForm">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="custEmail" />
+        </div>
+
+        <div class="rowForm">
+            <label for="vTimes">How many times you dine in?</label>
+            <input type="number" id="vTimes" name="visTimes" value="1" min="0" max="10"  step="1"/>
+        </div>
+
+        <div class="rowForm">
+            <label for="vRange">Rate your Experience</label>
+            <input type="range" id="vRange" name="vRange" value="1" min="0" max="10"  step="1"/>
+        </div>
+
+      </fieldset>
+
+      <fieldset id="custExp">
+        <legend>Customer Experience</legend>
+
+        <div class="rowForm">
+          <label for="vDate">Date of Visit</label>
+          <input type="datetime-local" id="vDate" name="visitDate" />
+        </div>
+
+        <div class="rowForm">
+          <label for="oType" id="oType">Order Type</label>
+          <select name="orderType" id="oType" > <!--size="2" multiple-->
+            <optgroup label="Group1">
+              <option value="order1">Carry Out</option>
+              <option value="order2" selected>Dine In</option>
+            </optgroup>
+
+            <optgroup label="Group2">
+              <option value="order3">Delivery</option>
+              <option value="order4">Take n' Bake</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="rowForm">
+         <label for="radio1">Was the food Good?</label>
+         <fieldset>
+            <label for="radio1">Yes</label>
+            <input type="radio" id="radio1" name="food" value="yes" checked/>
+
+            <label for="radio1N">No</label>
+            <input type="radio" id="radio1N" name="food" value="no"/>
+         </fieldset>
+        </div>
+
+        <div class="rowForm">
+            <label for="radio1">Was the service Good?</label>
+            <fieldset>
+               <label for="radio2">Yes</label>
+               <input type="radio" id="radio2" name="service" value="yes"/>
+   
+               <label for="radio2N">No</label>
+               <input type="radio" id="radio2N" name="service" value="no"/>
+            </fieldset>
+        </div>
+
+        <input type="checkbox" checked name="mailYes" id="mail"/>
+        <label for="mail"> Add me to your mailing list for promotions!!</label>
+        <br>
+        <label for="">Tell us more about your Experience</label>
+        <textarea name="exp" id="yourExp"></textarea>
+
+      </fieldset>
+
+      <div id="buttons">
+         <input type="submit" value="Submit the form"/>
+         <input type="reset" value="Cancel"/>
+      </div>
+    </form>
+  </body>
+</html>

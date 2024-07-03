@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+form#survey{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.rowForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+div.rowForm > *{
+    flex: 1 1 150px; /*grow by 1 unit, shrink by 1 unit and the flex-basis is 150px*/
+}
+
+form#survey > fieldset{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    font-size: 1.25em;
+    padding: 10px;
+    margin:10px
+}
+
+textarea{
+    height: 100px;
+    width: 95%;
+    margin: 10px;
+}
+
+div#buttons{
+    text-align: center;
+    width: 100%;
+}
